@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
+  /* ダークモード用の深い背景色 */
+  background-color: #0f172a;
+  /* Slate 900 */
+  background-image:
+    radial-gradient(at 40% 20%, hsla(266, 68%, 20%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, hsla(227, 65%, 25%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, hsla(208, 100%, 15%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(260, 50%, 20%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(240, 50%, 20%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, hsla(220, 50%, 20%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, hsla(280, 50%, 20%, 1) 0px, transparent 50%);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #f1f5f9;
+  /* Slate 100 */
+}
+
+/* ダークグラスモーフィズム */
+.glass-card {
+  /* 暗い半透明の背景 */
+  background: rgba(30, 41, 59, 0.4);
+  /* Slate 800 with opacity */
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  /* ボーダーは白の不透明度を下げて光沢感を出す */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* 影はより濃く */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+.glass-profile {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.hover-scale {
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.hover-scale:hover {
+  transform: translateY(-4px) scale(1.01);
+  /* ホバー時に少し明るく */
+  background: rgba(51, 65, 85, 0.6);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+}
+
+
+.hover-button:hover {
+  /* transform: translateY(-4px) scale(1.01); */
+  /* ホバー時に少し明るく */
+  background: rgba(51, 65, 85, 0.6);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
 }
