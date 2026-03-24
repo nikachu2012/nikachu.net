@@ -55,7 +55,7 @@ export default function Home() {
             </div>
           </a>
 
-          <a href="https://note.nikachu.net" className="glass-card hover-scale p-8 rounded-3xl flex flex-col justify-between group cursor-pointer h-60 md:h-auto">
+          <a href="https://nikachu.hatenablog.com" className="glass-card hover-scale p-8 rounded-3xl flex flex-col justify-between group cursor-pointer h-60 md:h-auto">
             <div className="flex justify-between items-start">
               <span className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-emerald-500/20 text-emerald-300 mb-4  backdrop-blur-md border border-emerald-500/10">
                 <Code2 className="w-7 h-7" />
